@@ -1,2 +1,2 @@
-# Project-Ghym-PJI231-2022
-Project "Ghym": Hardware performance comparator.
+# Project-GHYM-PJI231-2022
+Project "GHYM": Hardware performance comparator.
