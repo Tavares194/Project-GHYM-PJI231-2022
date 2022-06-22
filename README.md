@@ -10,6 +10,12 @@ Projeto desenvolvido na matéria de PJI, no ano de 2022, que tem por objetivo re
 
 Além disso, o software também possui comparação de compónentes de hardware.
 
+## Sistema voltado para usuários leigos
 
+Nossa aplicação é voltada para usuários básicos/intermediários que desejem uma recomendação de componentes. Assim basta ao usuário selecionar os softwares que deseja utilizar, para receber as recomendações.
+
+## Comparador de hardware simples e completo
+
+A GHYM também contará com um sistema único de comparação, trazendo informações de forma sucinta e completa
 
 
