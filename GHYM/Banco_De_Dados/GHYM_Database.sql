@@ -3,105 +3,105 @@ create database GHYM;
 use GHYM;
 
 create table Marca(
-id int NOT NULL,
-nome varchar(20),
-PRIMARY KEY (id)
+    id int NOT NULL,
+    nome varchar(20),
+    PRIMARY KEY (id)
 );
 
 -- NOME DA TABELA NÃO PODE SER 'CPU', POIS É UMA PALAVRA RESERVADA
 create table Processador(
-id int NOT NULL,
-id_marca int NOT NULL,
-nome varchar(60),
-clock float,
-turbo float,
-cores int,
-threads int,
-mark int,
-TDP int,
-lancamento varchar(20),
-arquitetura varchar(15),
-preco float,
-imagem longblob,
-PRIMARY KEY (id),
-FOREIGN KEY (id_marca) REFERENCES Marca(id)
+    id int NOT NULL,
+    id_marca int NOT NULL,
+    nome varchar(60),
+    clock float,
+    turbo float,
+    cores int,
+    threads int,
+    mark int,
+    TDP int,
+    lancamento varchar(20),
+    arquitetura varchar(15),
+    preco float,
+    imagem longblob,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_marca) REFERENCES Marca(id)
 );
 
 create table GPU(
-id int NOT NULL,
-id_marca int NOT NULL,
-nome varchar(60),
-clock int,
-mark int,
-VRAM int,
-TDP int,
-preco float,
-imagem longblob,
-PRIMARY KEY (id),
-FOREIGN KEY (id_marca) REFERENCES Marca(id)
+    id int NOT NULL,
+    id_marca int NOT NULL,
+    nome varchar(60),
+    clock int,
+    mark int,
+    VRAM int,
+    TDP int,
+    preco float,
+    imagem longblob,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_marca) REFERENCES Marca(id)
 );
 
 create table RAM(
-id int NOT NULL,
-id_marca int NOT NULL,
-nome varchar(60),
-frequencia int,
-capacidade int,
-tipo varchar(5),
-preco float,
-PRIMARY KEY (id),
-FOREIGN KEY (id_marca) REFERENCES Marca(id)
+    id int NOT NULL,
+    id_marca int NOT NULL,
+    nome varchar(60),
+    frequencia int,
+    capacidade int,
+    tipo varchar(5),
+    preco float,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_marca) REFERENCES Marca(id)
 );
 
 create table Tipo(
-id int NOT NULL,
-nome varchar(20),
-PRIMARY KEY (id)
+    id int NOT NULL,
+    nome varchar(20),
+    PRIMARY KEY (id)
 );
 
 create table RecomendacaoCpu(
-codigo int NOT NULL,
-coremax int,
-coremin int,
-corerec int,
-clockmax float,
-clockmin float,
-clockrec float,
-PRIMARY KEY (codigo)
+    codigo int NOT NULL,
+    coremax int,
+    coremin int,
+    corerec int,
+    clockmax float,
+    clockmin float,
+    clockrec float,
+    PRIMARY KEY (codigo)
 );
 
 create table RecomendacaoGpu(
-codigo int NOT NULL,
-vrammax int,
-vrammin int,
-vramrec int,
-clockmax float,
-clockmin float,
-clockrec float,
-PRIMARY KEY (codigo)
+    codigo int NOT NULL,
+    vrammax int,
+    vrammin int,
+    vramrec int,
+    clockmax float,
+    clockmin float,
+    clockrec float,
+    PRIMARY KEY (codigo)
 );
 
 create table RecomendacaoRam(
-codigo int NOT NULL,
-capacidademax int,
-capacidademin int,
-capacidaderec int,
-PRIMARY KEY (codigo)
+    codigo int NOT NULL,
+    capacidademax int,
+    capacidademin int,
+    capacidaderec int,
+    PRIMARY KEY (codigo)
 );
 
 create table Software(
-id int NOT NULL,
-id_recomendacaoram int NOT NULL,
-id_recomendacaogpu int NOT NULL,
-id_recomendacaocpu int NOT NULL,
-id_tipo int NOT NULL,
-nome varchar(50),
-imagem longblob,
-PRIMARY KEY (id),
-FOREIGN KEY (id_recomendacaoram) REFERENCES RecomendacaoRam(codigo),
-FOREIGN KEY (id_recomendacaogpu) REFERENCES RecomendacaoGpu(codigo),
-FOREIGN KEY (id_recomendacaocpu) REFERENCES RecomendacaoCpu(codigo),
-FOREIGN KEY (id_tipo) REFERENCES Tipo(id)
+    id int NOT NULL,
+    id_recomendacaoram int NOT NULL,
+    id_recomendacaogpu int NOT NULL,
+    id_recomendacaocpu int NOT NULL,
+    id_tipo int NOT NULL,
+    nome varchar(50),
+    imagem longblob,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_recomendacaoram) REFERENCES RecomendacaoRam(codigo),
+    FOREIGN KEY (id_recomendacaogpu) REFERENCES RecomendacaoGpu(codigo),
+    FOREIGN KEY (id_recomendacaocpu) REFERENCES RecomendacaoCpu(codigo),
+    FOREIGN KEY (id_tipo) REFERENCES Tipo(id)
 );
 
 insert into Marca (id, nome) values
