@@ -18,4 +18,14 @@ Nossa aplicação é voltada para usuários básicos/intermediários que desejem
 
 A GHYM também contará com um sistema único de comparação, trazendo informações de forma sucinta e completa
 
+### Integrantes
 
+Davi de Jesus Duarte - [???]( "Perfil do github")
+
+Gabriel De Oliveira - [Tavares194](https://github.com/Tavares194 "Perfil do github")
+
+Gustavo Henrique de Moraes - [???]("Perfil do github")
+
+Humberto da Torre Murad - [hdtorrad](https://github.com/hdtorrad "Perfil do github")
+
+Igor Almeida - [???]( "Perfil do github")
