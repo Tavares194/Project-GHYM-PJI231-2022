@@ -3,7 +3,7 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white) ![VSCode](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white) ![GitHub](	https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white) ![Git]( https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white) ![Word](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)
 
 ---
-> Application that compares and generates component recommendations based on a user's preferences
+> Java application on MVC architecture that compares and generates component recommendations based on a user's preferences
 
 System that, based on the software used by a user, generates two recommendations:
 1. Minimum: Minimum components for a given set of software
