@@ -1,40 +1,29 @@
-# GHYM
-##### PJI- 2022- 231-
+# Hardware comparator and configuration recommender
 
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white) ![VSCode](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white) ![GitHub](	https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white) ![Git]( https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white) ![Word](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)
 
-----------------------------------
-![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)![](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)![](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white)![](	https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)![](	https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=whitee) ![](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white)
+---
+> Application that compares and generates component recommendations based on a user's preferences
 
-----------------------------------
-> Aplicação que compara e gera recomendações de componentes baseado nas preferências de um usuário
+System that, based on the software used by a user, generates two recommendations:
+1. Minimum: Minimum components for a given set of software
+2. Recommended: Recommended components for a given software suite
 
-Sistema que com base nos softwares utilizados por um usuário gere três recomendações:
-1. Mínima: Componentes mínimos para determinado conjunto de softwares
-2. Recomendada: Componentes recomendados para um determinado conjunto de softwares
-3. Máxima: Componentes com um exelente desempenho para um determinado conjunto de softwares
+In addition, the software also features hardware component comparison.
 
-Além disso, o software também possui comparação de compónentes de hardware.
+---
+## System aimed at lay users
 
-----------------------------------
-## Sistema voltado para usuários leigos
+Application aimed at basic/intermediate users who want a component recommendation. So the user just selects the software he wants to use, to receive the recommendations.
 
-Nossa aplicação é voltada para usuários básicos/intermediários que desejem uma recomendação de componentes. Assim basta ao usuário selecionar os softwares que deseja utilizar, para receber as recomendações.
+## Simple and complete hardware comparator
 
-## Comparador de hardware simples e completo
+This application will also have a unique comparison system, bringing information in a succinct and complete way.
 
-A GHYM também contará com um sistema único de comparação, trazendo informações de forma sucinta e completa
+---
+### Gabriel Tavares - [Tavares194](https://github.com/Tavares194 "Perfil do github")
 
-----------------------------------
-### Integrantes
-
-Davi de Jesus Duarte - [???]( "Perfil do github")
-
-Gabriel De Oliveira - [Tavares194](https://github.com/Tavares194 "Perfil do github")
-
-Gustavo Henrique de Moraes - [???]("Perfil do github")
-
-Humberto da Torre Murad - [hdtorrad](https://github.com/hdtorrad "Perfil do github")
-
-Igor Almeida - [???]( "Perfil do github")
-
-> ##### <img src="Arquivos Suporte/IF.svg.png" alt="IF" width="12"/> Projeto sendo desenvolvido na matéria de PJI, na turma 231 no ano de 2022.
+### Contact links 📫
+###### [![Telegram]( https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Tavares_194) [![Gmail]( https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gabriel.tavares.1904@gmail.com) [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-tavares-a92239174/)
+---
+###### ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Tavares194&show_icons=true&theme=tokyonight)
