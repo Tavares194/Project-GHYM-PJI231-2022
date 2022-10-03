@@ -21,9 +21,8 @@ Application aimed at basic/intermediate users who want a component recommendatio
 This application will also have a unique comparison system, bringing information in a succinct and complete way.
 
 ---
-### Gabriel Tavares - [Tavares194](https://github.com/Tavares194 "Perfil do github")
+# Creator
+> Gabriel Tavares - [Tavares194](https://github.com/Tavares194 "Perfil do github")
 
-### Contact links 📫
+> Contact links 📫
 ###### [![Telegram]( https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Tavares_194) [![Gmail]( https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gabriel.tavares.1904@gmail.com) [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-tavares-a92239174/)
----
-###### ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Tavares194&show_icons=true&theme=tokyonight)
