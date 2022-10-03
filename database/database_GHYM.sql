@@ -265,7 +265,7 @@ ON id_recomendacaogpu = cod_recgpu;
 -- TELAS DE HARDWARES PARA UMA CONFIGURAÇÃO ESPECÍFICA
 -- EXEMPLO DE RECOMENDAÇÃO: REQUISITOS MÍNIMOS PARA GOD OF WAR
 
--- CONSULTA SEM WHERE: MEMÓRIAS QUE SE ENCAIXAM NA RECOMENDAÇÃO MÍNIMA DO EXEMPLO EM ORDEM CRESCENTE DE CAPACIDADE EM GBS
+-- CONSULTA SEM ON: MEMÓRIAS QUE SE ENCAIXAM NA RECOMENDAÇÃO MÍNIMA DO EXEMPLO EM ORDEM CRESCENTE DE CAPACIDADE EM GBS
 SELECT m.nome AS marca, r.nome AS memoria_ram, capacidade, frequencia, tipo, preco  
 FROM RAM r
 INNER JOIN Marca m ON m.cod_marca = r.id_marca
@@ -273,7 +273,7 @@ INNER JOIN RecomendacaoRam ON capacidade >= capacidademin
 INNER JOIN Software ON id_recomendacaoram = cod_recram and cod_soft = 1
 ORDER BY capacidade ASC;
 
--- CONSULTA COM WHERE: MEMÓRIAS QUE SE ENCAIXAM NA RECOMENDAÇÃO MÍNIMA DO EXEMPLO EM ORDEM CRESCENTE DE CAPACIDADE EM GBS
+-- CONSULTA COM ON: MEMÓRIAS QUE SE ENCAIXAM NA RECOMENDAÇÃO MÍNIMA DO EXEMPLO EM ORDEM CRESCENTE DE CAPACIDADE EM GBS -- OTIMIZADA PELO EXPLAIN
 CREATE VIEW recmin_ram AS
 SELECT m.nome AS marca, r.nome AS memoria_ram, capacidade, frequencia, tipo, preco  
 FROM RAM r
@@ -335,6 +335,9 @@ WHERE cores >= 4 and clock >= 3.1;
 
 SELECT * FROM recmin_gpu
 WHERE vram >= 8;
+
+SELECT AVG(capacidaderec) AS Média_RAM, AVG(corerec) AS Média_Core, AVG(vramrec) AS Média_VRAM
+FROM recs_softs;
 
 SELECT max(capacidademin), max(coremin), max(vrammin)
 FROM recmin_softs
