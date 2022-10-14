@@ -8,8 +8,8 @@ public class ConexaoBD {
     private static final String banco = "GHYM";
     private static final String timezone = "?useTimezone=true&serverTimezone=UTC";
     private static final String url = "jdbc:mysql://" + servidor + "/" + banco + timezone;
-    private static final String usuario = "root";
-    private static final String senha = "19042005";
+    private static final String usuario = "DATABASE_USER";
+    private static final String senha = "DATABASE_PASSWORD";
 
     public static Connection getConexao() {
         Connection connection = null;

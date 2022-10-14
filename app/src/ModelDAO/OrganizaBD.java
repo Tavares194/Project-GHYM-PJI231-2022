@@ -3,89 +3,54 @@ package ModelDAO;
 import java.util.ArrayList;
 
 public class OrganizaBD {
-    static float recMinSofts[][];
+    static float requisitoSoft[][];
 
-    public static float[][] getRecMinSofts() {
-        return recMinSofts;
-    }
-
-    public static void setRecMinSofts(float recMinSofts[][]) {
-        OrganizaBD.recMinSofts = recMinSofts;
+    public static float[][] getrequisitoSoft() {
+        return requisitoSoft;
     }
 
-    public OrganizaBD(ArrayList<String> escsoft){
-        recMinSofts = new float[escsoft.size()][6];
-        OrganizaBD.setRecMinSofts(recMinSofts);
+    public static void setrequisitoSoft(float requisitoSoft[][]) {
+        OrganizaBD.requisitoSoft = requisitoSoft;
     }
-    
-    public void juntaMin(String resultRecCPU[], String resultRecGPU[], String resultRecRAM[], byte cont){
-        recMinSofts[cont][0] = Float.parseFloat(resultRecCPU[0]) * Float.parseFloat(resultRecCPU[1]);
-        recMinSofts[cont][1] = Float.parseFloat(resultRecCPU[2]) * Float.parseFloat(resultRecCPU[3]);
-        recMinSofts[cont][2] = Float.parseFloat(resultRecGPU[0]) * Float.parseFloat(resultRecGPU[1]);
-        recMinSofts[cont][3] = Float.parseFloat(resultRecGPU[2]) * Float.parseFloat(resultRecGPU[3]);
-        recMinSofts[cont][4] = Float.parseFloat(resultRecRAM[0]);
-        recMinSofts[cont][5] = Float.parseFloat(resultRecRAM[1]);
-        OrganizaBD.setRecMinSofts(recMinSofts);
+
+    public OrganizaBD(ArrayList<String> softwareEscolhido) {
+        requisitoSoft = new float[softwareEscolhido.size()][6];
+        OrganizaBD.setrequisitoSoft(requisitoSoft);
     }
-    public float CPUMin(){
-        float maiorCPUMin = 0;
-        for(byte i = 0; i < recMinSofts.length; ++i){
-            if(recMinSofts[i][0] > maiorCPUMin){
-                maiorCPUMin = recMinSofts[i][0];
-            }
+
+    public void juntaRequisitos(String requisitoCPU[], String requisitoGPU[], String requisitoRAM[],
+            byte numeroDeSoftware) {
+        requisitoSoft[numeroDeSoftware][0] = Float.parseFloat(requisitoCPU[0]) * Float.parseFloat(requisitoCPU[1]);
+        requisitoSoft[numeroDeSoftware][1] = Float.parseFloat(requisitoCPU[2]) * Float.parseFloat(requisitoCPU[3]);
+        requisitoSoft[numeroDeSoftware][2] = Float.parseFloat(requisitoGPU[0]) * Float.parseFloat(requisitoGPU[1]);
+        requisitoSoft[numeroDeSoftware][3] = Float.parseFloat(requisitoGPU[2]) * Float.parseFloat(requisitoGPU[3]);
+        requisitoSoft[numeroDeSoftware][4] = Float.parseFloat(requisitoRAM[0]);
+        requisitoSoft[numeroDeSoftware][5] = Float.parseFloat(requisitoRAM[1]);
+        OrganizaBD.setrequisitoSoft(requisitoSoft);
+    }
+
+    public float[] cpuRequisito() {
+        return RecomendacaoMultiplosSoftwares(0, 1); // Equivalente no array
+    }
+
+    public float[] gpuRequisito() {
+        return RecomendacaoMultiplosSoftwares(2, 3); // Equivalente no array
+    }
+
+    public float[] ramRequisito() {
+        return RecomendacaoMultiplosSoftwares(4, 5); // Equivalente no array
+    }
+
+    public float[] RecomendacaoMultiplosSoftwares(int posicaoPrimeiroVetor, int posicaoSegundoVetor) {
+        float maiorRequisito[] = new float[2];
+
+        for (byte i = 0; i < requisitoSoft.length; ++i) {
+            if (requisitoSoft[i][posicaoPrimeiroVetor] > maiorRequisito[0])
+                maiorRequisito[0] = requisitoSoft[i][posicaoPrimeiroVetor];
+
+            if (requisitoSoft[i][posicaoSegundoVetor] > maiorRequisito[1])
+                maiorRequisito[1] = requisitoSoft[i][posicaoSegundoVetor];
         }
-        float resultRecsCPUSoft = maiorCPUMin;
-        return resultRecsCPUSoft;
-    }
-    public float CPURec(){
-        float maiorCPURec = 0;
-        for(byte i = 0; i < recMinSofts.length; ++i){
-            if(recMinSofts[i][1] > maiorCPURec){
-                maiorCPURec = recMinSofts[i][1];
-            }
-        }
-        float resultRecsCPUSoft = maiorCPURec;
-        return resultRecsCPUSoft;
-    }
-    
-    public float GPUMin(){
-        float maiorGPUMin = 0;
-        for(byte i = 0; i < recMinSofts.length; ++i){
-            if(recMinSofts[i][2] > maiorGPUMin){
-                maiorGPUMin = recMinSofts[i][2];
-            }
-        }
-        float resultRecsGPUSoft = maiorGPUMin;
-        return resultRecsGPUSoft;
-    }
-    public float GPURec(){
-        float maiorGPURec = 0;
-        for(byte i = 0; i < recMinSofts.length; ++i){
-            if(recMinSofts[i][3] > maiorGPURec){
-                maiorGPURec = recMinSofts[i][3];
-            }
-        }
-        float resultRecsGPUSoft = maiorGPURec;
-        return resultRecsGPUSoft;
-    }
-    public float RAMMin(){
-        float maiorRAMMin = 0;
-        for(byte i = 0; i < recMinSofts.length; ++i){
-            if(recMinSofts[i][4] > maiorRAMMin){
-                maiorRAMMin = recMinSofts[i][4];
-            }
-        }
-        float resultRecsRAMSoft = maiorRAMMin;
-        return resultRecsRAMSoft;
-    }
-    public float RAMRec(){
-        float maiorRAMRec = 0;
-        for(byte i = 0; i < recMinSofts.length; ++i){
-            if(recMinSofts[i][5] > maiorRAMRec){
-                maiorRAMRec = recMinSofts[i][5];
-            }
-        }
-        float resultRecsRAMSoft = maiorRAMRec;
-        return resultRecsRAMSoft;
+        return maiorRequisito;
     }
 }
